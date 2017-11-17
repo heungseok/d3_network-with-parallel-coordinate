@@ -8,7 +8,6 @@ var http = require('http').Server(app);
 // var world = require('./js/server_world');
 
 app.use('/js', express.static(__dirname + '/js'));
-app.use('/css', express.static(__dirname + '/css'));
 app.use('/data', express.static(__dirname + '/data'));
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/lib', express.static(__dirname + '/lib'));
