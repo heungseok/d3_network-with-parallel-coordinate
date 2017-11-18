@@ -2,22 +2,25 @@
  * Created by totor on 2017-11-17.
  */
 var width = 960,
-    height = 500;
+    height = 800;
 
 var devicePixelRatio = window.devicePixelRatio || 1;
 var network_svg = d3.select("#graph-container")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
+    .attr("height", 2*height/3)
 
-var network_g = network_svg.append("g").attr("transform", "translate(200,0)");
+var network_g = network_svg.append("g").attr("transform", "translate(" + (height/3) + ","+ (height/10) + ") scale(0.8)")
+// var network_g = network_svg.append("g").attr("transform", "translate(200,0) scale(0.5)");
+// var network_g = network_svg.append("g");
 
 var transform = d3.zoomIdentity,
     zoom = d3.behavior.zoom().scaleExtent([0.5, 8]).on("zoom", zoomed);
 
-var x = d3.scale.linear().range([0, height]);
-var y = d3.scale.linear().range([height, 0]);
+var x = d3.scale.linear().range([0, height/2]);
+var y = d3.scale.linear().range([height/2, 0]);
 var line = d3.svg.line();
+
 
 var pc_color;
 var color_map;
