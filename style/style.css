@@ -57,7 +57,7 @@ div.tooltip {
 }
 
 #graph-container circle{
-    stroke: #111;
+    /*stroke: #111;*/
     stroke-width: 0.01;
 
 }

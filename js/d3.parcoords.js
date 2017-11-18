@@ -2414,6 +2414,7 @@ pc.resize = function() {
 
 // highlight an array of data
 pc.highlight = function(data) {
+    // console.log(data);
   if (arguments.length === 0) {
     return __.highlighted;
   }
@@ -2422,6 +2423,7 @@ pc.highlight = function(data) {
   pc.clear("highlight");
   d3.selectAll([canvas.foreground, canvas.brushed]).classed("faded", true);
   data.forEach(path_highlight);
+
   events.highlight.call(this, data);
   return this;
 };
